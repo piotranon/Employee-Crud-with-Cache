@@ -56,7 +56,9 @@ class EmployeeController extends Controller
      * Display the specified resource.
      * 
      * @response 200
-     * @response 404
+     * @response 404 {
+    "message": "No query results for model [App\\Models\\Employee]."
+}
      * @response 422 {
     "message": "The given data was invalid.",
     "errors": {
@@ -95,7 +97,9 @@ class EmployeeController extends Controller
      * Update the specified resource in storage.
      * 
      * @response 200
-     * @response 404
+     * @response 404 {
+    "message": "No query results for model [App\\Models\\Employee]."
+}
      * @response 422 {
     "message": "The given data was invalid.",
     "errors": {
@@ -137,7 +141,9 @@ class EmployeeController extends Controller
      * Remove the specified resource from storage.
      *
      * @response 200
-     * @response 404
+     * @response 404 {
+    "message": "No query results for model [App\\Models\\Employee]."
+}
      * 
      * @param  \App\Models\Employee  $employee
      * @return \Illuminate\Http\Response

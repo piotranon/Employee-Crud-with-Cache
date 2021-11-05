@@ -59,7 +59,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">http://Employees.test</code></pre>
+<pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1>Authenticating requests</h1>
 <p>This API is not authenticated.</p>
@@ -80,12 +80,12 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://Employees.test/api/employee" \
+    --get "http://localhost/api/employee" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://Employees.test/api/employee"
+    "http://localhost/api/employee"
 );
 
 const headers = {
@@ -147,7 +147,7 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request POST \
-    "http://Employees.test/api/employee" \
+    "http://localhost/api/employee" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -159,7 +159,7 @@ fetch(url, {
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://Employees.test/api/employee"
+    "http://localhost/api/employee"
 );
 
 const headers = {
@@ -277,12 +277,12 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://Employees.test/api/employee/2" \
+    --get "http://localhost/api/employee/5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://Employees.test/api/employee/2"
+    "http://localhost/api/employee/5"
 );
 
 const headers = {
@@ -309,7 +309,9 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{}</code>
+<code class="language-json">{
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Employee].&quot;
+}</code>
  </pre>
             <blockquote>
             <p>Example response (422):</p>
@@ -366,7 +368,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-employee--id-"
-               value="2"
+               value="5"
                data-component="url" hidden>
     <br>
 <p>The ID of the employee.</p>
@@ -385,7 +387,7 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request PUT \
-    "http://Employees.test/api/employee/5" \
+    "http://localhost/api/employee/7" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -397,7 +399,7 @@ fetch(url, {
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://Employees.test/api/employee/5"
+    "http://localhost/api/employee/7"
 );
 
 const headers = {
@@ -432,7 +434,9 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{}</code>
+<code class="language-json">{
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Employee].&quot;
+}</code>
  </pre>
             <blockquote>
             <p>Example response (422):</p>
@@ -489,7 +493,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-employee--id-"
-               value="5"
+               value="7"
                data-component="url" hidden>
     <br>
 <p>The ID of the employee.</p>
@@ -549,12 +553,12 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request DELETE \
-    "http://Employees.test/api/employee/15" \
+    "http://localhost/api/employee/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://Employees.test/api/employee/15"
+    "http://localhost/api/employee/2"
 );
 
 const headers = {
@@ -581,7 +585,9 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{}</code>
+<code class="language-json">{
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Employee].&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-DELETEapi-employee--id-" hidden>
@@ -615,7 +621,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-employee--id-"
-               value="15"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The ID of the employee.</p>

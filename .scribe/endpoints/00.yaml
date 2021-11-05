@@ -88,7 +88,7 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 2
+        example: 5
         type: integer
     queryParameters: []
     bodyParameters: []
@@ -100,7 +100,10 @@ endpoints:
         description: '200'
       -
         status: 404
-        content: '{}'
+        content: |-
+          {
+          "message": "No query results for model [App\\Models\\Employee]."
+          }
         headers: []
         description: '404'
       -
@@ -142,7 +145,7 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 5
+        example: 7
         type: integer
     queryParameters: []
     bodyParameters:
@@ -178,7 +181,10 @@ endpoints:
         description: '200'
       -
         status: 404
-        content: '{}'
+        content: |-
+          {
+          "message": "No query results for model [App\\Models\\Employee]."
+          }
         headers: []
         description: '404'
       -
@@ -220,7 +226,7 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 15
+        example: 2
         type: integer
     queryParameters: []
     bodyParameters: []
@@ -232,7 +238,10 @@ endpoints:
         description: '200'
       -
         status: 404
-        content: '{}'
+        content: |-
+          {
+          "message": "No query results for model [App\\Models\\Employee]."
+          }
         headers: []
         description: '404'
     responseFields: []

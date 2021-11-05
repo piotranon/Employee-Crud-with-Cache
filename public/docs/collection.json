@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "Employees.test"
+            "value": "localhost"
         }
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ee0be576-cd08-4d11-946a-fb3463d71391",
+        "_postman_id": "37c865c4-8303-42d2-999c-d4d73b733c66",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -113,7 +113,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "5",
                                     "description": "The ID of the employee."
                                 }
                             ]
@@ -145,7 +145,7 @@
                         {
                             "header": [],
                             "code": 404,
-                            "body": "{}",
+                            "body": "{\n\"message\": \"No query results for model [App\\\\Models\\\\Employee].\"\n}",
                             "name": ""
                         },
                         {
@@ -169,7 +169,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "7",
                                     "description": "The ID of the employee."
                                 }
                             ]
@@ -204,7 +204,7 @@
                         {
                             "header": [],
                             "code": 404,
-                            "body": "{}",
+                            "body": "{\n\"message\": \"No query results for model [App\\\\Models\\\\Employee].\"\n}",
                             "name": ""
                         },
                         {
@@ -228,7 +228,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "15",
+                                    "value": "2",
                                     "description": "The ID of the employee."
                                 }
                             ]
@@ -260,7 +260,7 @@
                         {
                             "header": [],
                             "code": 404,
-                            "body": "{}",
+                            "body": "{\n\"message\": \"No query results for model [App\\\\Models\\\\Employee].\"\n}",
                             "name": ""
                         }
                     ]
