@@ -1,0 +1,324 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://Employees.test'
+paths:
+  /api/employee:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Employee
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Employee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Name of employee.'
+                  example: Piotr
+                last_name:
+                  type: string
+                  description: 'Last Name of employee.'
+                  example: Długosz
+                position:
+                  type: string
+                  description: 'Position of employee.'
+                  example: 'Szef totalny'
+                salary:
+                  type: integer
+                  description: 'Salary of employee.'
+                  example: 10000
+              required:
+                - name
+                - last_name
+                - position
+      security: []
+  '/api/employee/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    name:
+                      - 'The name field is required.'
+                    last_name:
+                      - 'The last name field is required.'
+                    position:
+                      - 'The position field is required.'
+                    salary:
+                      - 'The salary field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      name:
+                        - 'The name field is required.'
+                      last_name:
+                        - 'The last name field is required.'
+                      position:
+                        - 'The position field is required.'
+                      salary:
+                        - 'The salary field is required.'
+      tags:
+        - Employee
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    name:
+                      - 'The name field is required.'
+                    last_name:
+                      - 'The last name field is required.'
+                    position:
+                      - 'The position field is required.'
+                    salary:
+                      - 'The salary field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      name:
+                        - 'The name field is required.'
+                      last_name:
+                        - 'The last name field is required.'
+                      position:
+                        - 'The position field is required.'
+                      salary:
+                        - 'The salary field is required.'
+      tags:
+        - Employee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Name of employee.'
+                  example: Piotr
+                last_name:
+                  type: string
+                  description: 'Last Name of employee.'
+                  example: Długosz
+                position:
+                  type: string
+                  description: 'Position of employee.'
+                  example: 'Szef totalny'
+                salary:
+                  type: integer
+                  description: 'Salary of employee.'
+                  example: 10000
+              required:
+                - name
+                - last_name
+                - position
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Employee
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the employee.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Employee
+    description: ''

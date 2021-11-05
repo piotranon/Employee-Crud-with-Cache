@@ -1,0 +1,238 @@
+name: Employee
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/employee
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/employee
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Name of employee.'
+        required: true
+        example: Piotr
+        type: string
+      last_name:
+        name: last_name
+        description: 'Last Name of employee.'
+        required: true
+        example: Długosz
+        type: string
+      position:
+        name: position
+        description: 'Position of employee.'
+        required: true
+        example: 'Szef totalny'
+        type: string
+      salary:
+        name: salary
+        description: 'Salary of employee.'
+        required: false
+        example: 10000
+        type: integer
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+      -
+        status: 422
+        content: '{}'
+        headers: []
+        description: '422'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/employee/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the employee.'
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+      -
+        status: 404
+        content: '{}'
+        headers: []
+        description: '404'
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The given data was invalid.",
+          "errors": {
+          "name": [
+          "The name field is required."
+          ],
+          "last_name": [
+          "The last name field is required."
+          ],
+          "position": [
+          "The position field is required."
+          ],
+          "salary": [
+          "The salary field is required."
+          ]
+          }
+          }
+        headers: []
+        description: '422'
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/employee/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the employee.'
+        required: true
+        example: 5
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Name of employee.'
+        required: true
+        example: Piotr
+        type: string
+      last_name:
+        name: last_name
+        description: 'Last Name of employee.'
+        required: true
+        example: Długosz
+        type: string
+      position:
+        name: position
+        description: 'Position of employee.'
+        required: true
+        example: 'Szef totalny'
+        type: string
+      salary:
+        name: salary
+        description: 'Salary of employee.'
+        required: false
+        example: 10000
+        type: integer
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+      -
+        status: 404
+        content: '{}'
+        headers: []
+        description: '404'
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The given data was invalid.",
+          "errors": {
+          "name": [
+          "The name field is required."
+          ],
+          "last_name": [
+          "The last name field is required."
+          ],
+          "position": [
+          "The position field is required."
+          ],
+          "salary": [
+          "The salary field is required."
+          ]
+          }
+          }
+        headers: []
+        description: '422'
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/employee/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the employee.'
+        required: true
+        example: 15
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+      -
+        status: 404
+        content: '{}'
+        headers: []
+        description: '404'
+    responseFields: []
