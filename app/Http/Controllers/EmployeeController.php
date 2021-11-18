@@ -152,6 +152,9 @@ class EmployeeController extends Controller
     {
         $employee->delete();
 
+        Cache::forget('employee-'.$id);
+        Cache::forget('all-employees');
+        
         return response()->json();
     }
 }
