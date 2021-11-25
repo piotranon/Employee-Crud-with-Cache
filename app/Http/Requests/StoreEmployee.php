@@ -30,9 +30,9 @@ class StoreEmployee extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|string|min:5|max:30',
-            'last_name'=>'required|string|min:5|max:30',
-            'position'=>'required|string|min:5|max:30',
+            'name'=>'required|string|min:3|max:30',
+            'last_name'=>'required|string|min:3|max:30',
+            'position'=>'required|string|min:3|max:30',
             'salary' => 'required|numeric|min:0'
         ];
     }
