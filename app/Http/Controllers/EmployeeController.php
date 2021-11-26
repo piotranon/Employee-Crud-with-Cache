@@ -129,6 +129,8 @@ class EmployeeController extends Controller
 
         $cache = Cache::get('employee-'.$id);
 
+        Cache::forget('all-employees');
+
         if(!empty($cache))
         {
             Cache::forget('employee-'.$id);
