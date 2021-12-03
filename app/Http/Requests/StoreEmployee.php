@@ -33,7 +33,7 @@ class StoreEmployee extends FormRequest
             'name'=>'required|string|min:3|max:30',
             'last_name'=>'required|string|min:3|max:30',
             'position'=>'required|string|min:3|max:30',
-            'salary' => 'required|numeric|min:0'
+            'salary' => 'required|numeric|min:0|max:999999999'
         ];
     }
 }
