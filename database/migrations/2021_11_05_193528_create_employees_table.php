@@ -19,7 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->string('position');
-            $table->float('salary',8,2)->min(0);
+            $table->float('salary',32,2)->min(0);
             $table->timestamps();
         });
     }
